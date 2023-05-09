@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.otf');
+}
+
+
+.baniere {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/baniere.png');
+    width: 100%;
+    max-width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+}
+
+h1 {
+    color: white;
+    height: 223px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 48px;
+}
