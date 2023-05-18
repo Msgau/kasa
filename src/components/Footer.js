@@ -1,13 +1,15 @@
-import '../css/Footer.css'
-import WhiteLogo from '../assets/white_logo.png'
+import "../css/Footer.css";
+import WhiteLogo from "../assets/white_logo.png";
 
 export default function Footer() {
-    return (
-        <footer>
-            <div>
-    <img src={WhiteLogo} alt="logo_Casa" />
-    </div>
-            <p>© 2020 Kasa. All rights reserved</p>
-        </footer>
-    );
+  return (
+    <footer>
+      <div className="footerContent">
+        <div>
+          <img src={WhiteLogo} alt="logo_Casa" />
+        </div>
+        <p>© 2020 Kasa. All rights reserved</p>
+      </div>
+    </footer>
+  );
 }

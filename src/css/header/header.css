@@ -1,29 +1,39 @@
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 68px;
-    margin: 40px auto 63px auto;
+    height: 98px;
+    margin: 25px auto 48px auto;
+    width: 1240px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
 }
-
-nav {
+header img{
+    margin: 0;
+}
+header nav {
+    margin: 0;
+}
+header nav ul{
     display: flex;
     width: 300px;
-    justify-content:end;
+    padding: 0;
 }
 
-nav div {
+header nav li {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 142.6%;
     color: #FF6060;
 }
-nav a {
+header nav a {
     color: #FF6060;
     text-decoration: none;
 }
-nav a:hover {
+header nav a:hover {
     text-decoration: underline;
 }

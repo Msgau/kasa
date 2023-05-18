@@ -1,26 +1,29 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from "../../components/Header.js"
+import Footer from "../../components/Footer.js";
 import Home from './Home';
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
-  </React.StrictMode>
-)
-
-
+import About from '../About.jsx';
+import Error404 from '../Error404.jsx';
 
 function App() {
   return (
 
-    <Home />
+    <div className="page-container">
+    <div className="content-wrap">
+    
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/*" element={<Error404 />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+    </div>
+    
+    <Footer />
+  </div>
 
   );
 }

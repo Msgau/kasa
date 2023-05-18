@@ -1,16 +1,13 @@
-import Header from '../../components/Header.js';
-import Baniere from "../../components/Baniere.js";
+import BaniereHome from "../../components/BaniereHome.js";
 import Gallery from '../../components/Gallery.js';
-import Footer from '../../components/Footer.js';
-
+import Header from "../../components/Header.js";
 export default function Home() {
 
     return (
         <div>
           <Header />
-          <Baniere />
+          <BaniereHome />
           <Gallery />
-          <Footer />
         </div>
       );
       

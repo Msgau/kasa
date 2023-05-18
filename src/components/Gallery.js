@@ -1,16 +1,22 @@
-import Block from "./gallery/block";
-import '../css/Gallery.css';
-
+import "../css/Gallery.css";
+import logements from "../data/logements.json";
 
 export default function Gallery() {
-    return (
-        <div className="Gallery">
-            <Block imgSrc="/path/to/image1.jpg" />
-            <Block imgSrc="/path/to/image2.jpg" />
-            <Block imgSrc="/path/to/image3.jpg" />
-            <Block imgSrc="/path/to/image4.jpg" />
-            <Block imgSrc="/path/to/image5.jpg" />
-            <Block imgSrc="/path/to/image6.jpg" />
-        </div>
-    );
+  const blockStyle = {
+    background:
+      "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
+  };
+
+  return (
+    <ul className="Gallery">
+      {logements.map((logement) => (
+        <li key={logement.id}>
+          <div className="block" style={blockStyle}>
+            <img src={logement.cover} alt={logement.title} />
+            <h2>{logement.title}</h2>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 }

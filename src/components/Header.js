@@ -1,6 +1,6 @@
 import '../css/header/header.css'
 import logo from '../assets/LOGO.png'
-
+import Menu from './Menu';
 
 export default function Header() {
     return (
@@ -17,9 +17,3 @@ function Logo(){
     )
   }
   
-function Menu(){
-    return <nav>
-      <div><a href='#'>Accueil</a></div>
-      <div><a href='#'>A propos</a></div>
-    </nav>
-  }
