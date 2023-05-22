@@ -1,0 +1,43 @@
+.rooms {
+    max-width: 1240px;
+    width: 100%;
+}
+
+.bodyDescription {
+    display: flex;
+    justify-content: space-between;
+}
+.bodyContainer {
+    margin: 0;
+    width: 47%;
+}
+
+.bodyDescription h5 {
+    color: white;
+    background-color: #FF6060;
+    margin: 24px 0 0 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 20px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bodyDescription h5 img {
+    position: absolute;
+    right: 20px;
+}
+
+.bodyDescription p, .accomodationEquipments {
+    min-height: 240px;
+    color: #FF6060;
+    background-color: #F7F7F7;
+    padding: 30px 12px 20px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    border-radius: 0 0 10px 10px;
+}

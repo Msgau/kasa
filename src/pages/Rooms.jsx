@@ -2,6 +2,9 @@ import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
 import Header from "../components/Header";
 import { useState } from "react";
+import unroll from "../assets/icons/VectorDown.png";
+import rollUp from "../assets/icons/VectorUp.png";
+import "../css/Rooms.css"
 
 export default function Rooms() {
   const { id } = useParams();
@@ -12,7 +15,7 @@ export default function Rooms() {
   }
 
   return (
-    <div>
+    <div className="rooms">
       <Header />
       <Diapo accomodation={accomodation} />
       <HeadDescription accomodation={accomodation} />
@@ -76,15 +79,38 @@ function HeadDescription({ accomodation }) {
 }
 
 function BodyDescription({ accomodation }) {
-  return (
-    <div>
-      <div>
-        <h5>Description</h5>
-        <p>{accomodation.description}</p>
+    const [showDescription, setShowDescription] = useState(false);
+    const [showEquipements, setShowEquipements] = useState(false);
+    return (
+      <div className="bodyDescription">
+        <div className="bodyContainer">
+          <h5 onClick={() => setShowDescription(!showDescription)}>
+            Description
+            <img
+              src={showDescription ? rollUp : unroll}
+              alt="dérouler fiabilité"
+              className="arrowDown"
+            />
+          </h5>
+          {showDescription && <p>{accomodation.description}</p>}
+        </div>
+        <div className="bodyContainer">
+          <h5 onClick={() => setShowEquipements(!showEquipements)}>
+            Equipements
+            <img
+              src={showEquipements ? rollUp : unroll}
+              alt="dérouler fiabilité"
+              className="arrowDown"
+            />
+          </h5>
+          {showEquipements && 
+          <ul className="accomodationEquipments">{showEquipements && accomodation.equipments.map((equipment, index) => (
+            
+              <li key={index} className="accomodationEquipment">{equipment}</li>
+            
+          ))}</ul>}
+        </div>
       </div>
-      <div>
-        <h5>Equipements</h5>
-      </div>
-    </div>
-  );
-}
+    );
+  }
+  

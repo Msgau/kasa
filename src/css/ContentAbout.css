@@ -6,12 +6,11 @@
     border-radius: 25px;
 }
 .about h2, .about p{
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 24px;
     line-height: 142.6%;
     width: 1023px;
 }
-.about h2 {
+.about h2{
 
     color: white;
     background-color: #FF6060;
