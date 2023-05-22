@@ -1,3 +1,6 @@
+.content-wrap {
+    width: 100%;
+}
 
 header {
     display: flex;
@@ -11,16 +14,21 @@ header {
     z-index: 100;
     background-color: white;
 }
-header img{
+
+.homeHeader{
     margin: 0;
+}
+.homeHeader img {
+    margin-right: 20px;
 }
 header nav {
     margin: 0;
+    width: 300px;
 }
 header nav ul{
     display: flex;
-    width: 300px;
     padding: 0;
+    justify-content: space-between;
 }
 
 header nav li {
@@ -33,7 +41,52 @@ header nav li {
 header nav a {
     color: #FF6060;
     text-decoration: none;
+    margin: 0;
 }
 header nav a:hover {
     text-decoration: underline;
+}
+
+
+
+@media all and (max-width: 1240px) {
+.content-wrap {
+        width: 89.5%;
+    }
+    header {
+        width: 100%;
+        margin: 0;
+    }
+    header nav {
+        max-width: 230px;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+    .homeHeader img{
+        width: 145px;
+    }
+    header nav a:active {
+        text-decoration-line: underline;
+    }
+
+    header nav li {
+        font-size: 20px;
+    }
+    header nav ul {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 375px) {
+
+    header nav li {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    header nav {
+        max-width: 140px;
+        margin: 0;
+    }
 }

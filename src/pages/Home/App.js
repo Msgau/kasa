@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from "../../components/Header.js"
 import Footer from "../../components/Footer.js";
 import Home from './Home';
 import About from '../About.jsx';
 import Error404 from '../Error404.jsx';
+import Rooms from '../Rooms.jsx';
+import '../../css/Index.css'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/*" element={<Error404 />} />
           <Route path="/about" element={<About />} />
+          <Route path='/rooms/:id' element={<Rooms />} />
         </Routes>
       </Router>
     </div>

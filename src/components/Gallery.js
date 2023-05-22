@@ -1,5 +1,6 @@
 import "../css/Gallery.css";
 import logements from "../data/logements.json";
+import { Link } from 'react-router-dom'
 
 export default function Gallery() {
   const blockStyle = {
@@ -8,15 +9,17 @@ export default function Gallery() {
   };
 
   return (
+    <div className="backgroundGallery">
     <ul className="Gallery">
       {logements.map((logement) => (
         <li key={logement.id}>
-          <div className="block" style={blockStyle}>
+          <Link to={`/rooms/${logement.id}`}><div className="block" style={blockStyle}>
             <img src={logement.cover} alt={logement.title} />
             <h2>{logement.title}</h2>
-          </div>
+          </div></Link>
         </li>
       ))}
     </ul>
+    </div>
   );
 }

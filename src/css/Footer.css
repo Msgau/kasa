@@ -21,3 +21,14 @@ footer p {
     font-size: 24px;
     line-height: 142.6%;
 }
+
+@media all and (max-width: 375px) {
+
+    footer p {
+        font-size: 12px;
+        margin: 30px auto auto auto;
+    }
+    footer div {
+        margin: auto auto 0 auto;
+    }
+}

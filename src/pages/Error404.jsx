@@ -7,7 +7,7 @@ export default function Error404() {
       <Header />
       <div id="error404">
         <div id="number404">404</div>
-        <p>Oups! La page que vous demandez n'existe pas.</p>
+        <p><span>Oups! La page que</span> <span className="lineBreak">vous demandez n'existe pas.</span></p>
         <div>
           <Link to="/">Retourner à la page d'accueil</Link>
         </div>

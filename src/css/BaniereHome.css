@@ -12,7 +12,7 @@
     border-radius: 25px;
 }
 
-h1 {
+.baniere h1 {
     color: white;
     height: 223px;
     display: flex;
@@ -23,3 +23,41 @@ h1 {
     font-weight: 500;
     font-size: 48px;
 }
+.baniere span {
+    margin: 0;
+    white-space: pre;
+}
+
+@media all and (max-width: 800px) {
+
+    .baniere h1 {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+    .baniere h1 {
+        font-size: 36px;
+    }
+
+}
+
+@media all and (max-width: 375px) {
+    .baniere {
+        height: 111px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/baniereMobile.png');
+    }
+    .baniere h1 {
+        font-size: 24px;
+        height: 100%;
+        margin-left: 16px;
+        align-items: flex-start;
+    }
+    .lineBreak {
+        flex-direction: column;
+    }
+}
+
+
+

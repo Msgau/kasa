@@ -1,7 +1,11 @@
-import '../css/BaniereHome.css'
+import "../css/BaniereHome.css";
 
 export default function BaniereHome() {
-    return (
-        <div className="baniere"><h1>Chez vous, partout et ailleurs</h1></div>
-    );
+  return (
+    <div className="baniere">
+      <h1>
+        <span>Chez vous, </span><span className="lineBreak">partout et ailleurs</span>
+      </h1>
+    </div>
+  );
 }

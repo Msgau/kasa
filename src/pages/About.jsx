@@ -1,11 +1,11 @@
 import Header from "../components/Header.js";
-import BaniereAbout from "../components/BaniereAbout.jsx";
+import ContentAbout from "../components/ContentAbout.jsx";
 
 export default function About() {
     return (
       <div>
         <Header />
-        <BaniereAbout />
+        <ContentAbout />
       </div>
     );
 }
