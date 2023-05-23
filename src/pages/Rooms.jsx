@@ -6,17 +6,16 @@ import unroll from "../assets/icons/VectorDown.png";
 import rollUp from "../assets/icons/VectorUp.png";
 import "../css/Rooms.css";
 
-
 export default function Rooms() {
-// On relie la page à l'objet dans le json à l'aide de l'url de la page qui contient son id
+  // On relie la page à l'objet dans le json à l'aide de l'url de la page qui contient son id
   const { id } = useParams();
   const accomodation = logements.find((accomodation) => accomodation.id === id);
-// Si l'url ne coincide avec aucun id ==> 404. on utilise Navigate et non Link car on est dans du js.
+  // Si l'url ne coincide avec aucun id ==> 404. on utilise Navigate et non Link car on est dans du js.
   if (!accomodation) {
     return <Navigate to="/404" />;
   }
 
-//  Affichage de la page
+  //  Affichage de la page
 
   return (
     <div className="rooms">
@@ -29,13 +28,14 @@ export default function Rooms() {
 }
 
 function Diapo({ accomodation }) {
+  // On initialise currentImageIndex à 0, qui est utilisé dans la src de l'image. La src affiche donc par défaut la première image du talbeau, l'image 0.
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // En appuyant sur un bouton, on change la valeur de currentImageIndex avec setCurrentImageIndex. Si c'est = à 0 ou au max, on revient à la fin ou au début.
   const previousImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? accomodation.pictures.length - 1 : prevIndex - 1
     );
-    console.log (currentImageIndex);
   };
 
   const nextImage = () => {
@@ -44,15 +44,36 @@ function Diapo({ accomodation }) {
     );
   };
 
+  // S'il n'y a qu'une seule image, on ne montre pas les boutons de navigation
+  if (accomodation.pictures.length === 1) {
+    return (
+      <div className="carrousel">
+        <img
+          src={accomodation.pictures[currentImageIndex]}
+          alt={accomodation.title}
+        />
+        <div className="pictureNumber">
+          {currentImageIndex + 1}/{accomodation.pictures.length}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="carrousel">
       <img
         src={accomodation.pictures[currentImageIndex]}
         alt={accomodation.title}
       />
-      <button onClick={previousImage} className="previous button">Previous</button>
-      <button onClick={nextImage} className="next button">Next</button>
-      <div className="pictureNumber">{currentImageIndex +1}/{accomodation.pictures.length}</div>
+      <button onClick={previousImage} className="previous button">
+        Précédent
+      </button>
+      <button onClick={nextImage} className="next button">
+        Suivant
+      </button>
+      <div className="pictureNumber">
+        {currentImageIndex + 1}/{accomodation.pictures.length}
+      </div>
     </div>
   );
 }
@@ -66,8 +87,9 @@ function HeadDescription({ accomodation }) {
   const remainingWords = hostNameWords.slice(1).join(" ");
 
   const stars = [];
-  for (let i = 1; i <= 5; i++) { // On génère les cinq étoiles
-    const starClass = i <= accomodation.rating ? 'star filled' : 'star'; // Pour chaque étoile, tant que i est inférieur à la note, on attribue à l'étoile la classe "star filled". Ensuite, on lui attribue la classe "star".
+  for (let i = 1; i <= 5; i++) {
+    // On génère les cinq étoiles
+    const starClass = i <= accomodation.rating ? "star filled" : "star"; // Pour chaque étoile, tant que i est inférieur à la note, on attribue à l'étoile la classe "star filled". Ensuite, on lui attribue la classe "star".
     stars.push(<div key={i} className={starClass}></div>);
   }
 
@@ -84,7 +106,7 @@ function HeadDescription({ accomodation }) {
           ))}
         </div>
       </div>
-      <div className="headContainer">
+      <div className="headContainer second">
         <div className="accomodationHost">
           <h4 className="accomodationHostName">
             {/* Dans le JSX, nous affichons le premier mot séparément dans une balise <span> avec la classe firstWord. Cela nous permettra d'appliquer un style CSS spécifique au premier mot, ici display:block pour le séparer de remainingWordsqui contient tous els autres mots. */}
@@ -96,17 +118,12 @@ function HeadDescription({ accomodation }) {
             alt={"Photo de " + accomodation.host.name}
           />
         </div>
-        <div>
-          {/* Les étoiles sont ajoutées via CSS */}
-      <div className="accomodationRating">
-        {stars}
-      </div>
-    </div>
+        {/* Les étoiles sont ajoutées via CSS */}
+        <div className="accomodationRating">{stars}</div>
       </div>
     </div>
   );
 }
-
 
 function BodyDescription({ accomodation }) {
   const [showDescription, setShowDescription] = useState(false);
