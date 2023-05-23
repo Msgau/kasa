@@ -52,31 +52,44 @@ function Diapo({ accomodation }) {
 }
 
 function HeadDescription({ accomodation }) {
-  return (
-    <div>
-      <div>
-        <h2 className="accomodationTitle">{accomodation.title}</h2>
-        <h3 className="accomodationLocation">{accomodation.location}</h3>
-        {accomodation.tags.map((tag, index) => (
-          <div key={index}>
-            <p className="accomodationtags">{tag}</p>
+    //  Séparation Prénom/Nom : méthode split(' ') pour diviser le nom de l'hôte en mots individuels. Cela crée un tableau hostNameWords contenant tous les mots du nom de l'hôte.
+    const hostNameWords = accomodation.host.name.split(' ');
+    // Nous récupérons le premier mot du tableau en utilisant hostNameWords[0].
+    const firstWord = hostNameWords[0];
+    // nous utilisons hostNameWords.slice(1).join(' ') pour récupérer les mots restants du nom de l'hôte après le premier mot (grâce à slice) et les séparer par un espace grâce à join.
+    const remainingWords = hostNameWords.slice(1).join(' ');
+  
+    return (
+      <div className="accomodation">
+        <div className="headContainer">
+          <h2 className="accomodationTitle">{accomodation.title}</h2>
+          <h3 className="accomodationLocation">{accomodation.location}</h3>
+          <div className="accomodationtags">
+            {accomodation.tags.map((tag, index) => (
+              <p key={index} className="accomodationtag">
+                {tag}
+              </p>
+            ))}
           </div>
-        ))}
-      </div>
-      <div>
-        <h4 className="accomodationHostName">{accomodation.host.name}</h4>
-        <div>
-          <img
-            className="accomodationHostPicture"
-            src={accomodation.host.picture}
-            alt={"Photo de " + accomodation.host.name}
-          />
         </div>
-        <div>Note : {accomodation.rating}/5</div>
+        <div className="headContainer">
+          <div className="accomodationHost">
+            <h4 className="accomodationHostName">
+                {/* Dans le JSX, nous affichons le premier mot séparément dans une balise <span> avec la classe firstWord. Cela nous permettra d'appliquer un style CSS spécifique au premier mot, ici display:block pour le séparer de remainingWordsqui contient tous els autres mots. */}
+              <span className="firstWord">{firstWord}</span> {remainingWords}
+            </h4>
+            <img
+              className="accomodationHostPicture"
+              src={accomodation.host.picture}
+              alt={"Photo de " + accomodation.host.name}
+            />
+          </div>
+          <div>Note : {accomodation.rating}/5</div>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+  
 
 function BodyDescription({ accomodation }) {
     const [showDescription, setShowDescription] = useState(false);

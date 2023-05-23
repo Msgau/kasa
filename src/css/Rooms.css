@@ -1,7 +1,74 @@
+/* General */
 .rooms {
     max-width: 1240px;
     width: 100%;
 }
+
+/* General font */
+
+.accomodation, .bodyDescription p, .accomodationEquipments {
+    color: #FF6060;
+}
+
+/* HeadDescription */
+
+.accomodation {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 24px 0;
+}
+
+.headContainer {
+    margin: 0
+}
+
+.accomodationTitle {
+    font-size: 36px;
+    font-weight: 500;
+}
+.accomodationLocation {
+    font-size: 18px;
+    font-weight: 500;
+}
+.accomodationtags {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.accomodationtag {
+    color: white;
+    background-color: #FF6060;
+    border-radius: 10px;
+    min-width: 115px;
+    padding: 0 5px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 0 0;
+}
+.accomodationHost {
+    display: flex;
+}
+
+.firstWord {
+    display: block;
+  }
+  
+.accomodationHostName{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.accomodationHostPicture {
+    border-radius: 50%;
+    width: 64px;
+    margin-left: 10px;
+}
+
+
+/* BodyDescription */
 
 .bodyDescription {
     display: flex;
@@ -9,7 +76,7 @@
 }
 .bodyContainer {
     margin: 0;
-    width: 47%;
+    width: 46.936%;
 }
 
 .bodyDescription h5 {
@@ -32,7 +99,7 @@
 }
 
 .bodyDescription p, .accomodationEquipments {
-    min-height: 240px;
+    min-height: 230px;
     color: #FF6060;
     background-color: #F7F7F7;
     padding: 30px 12px 20px 20px;
