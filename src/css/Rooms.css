@@ -10,6 +10,57 @@
     color: #FF6060;
 }
 
+/* Diapo */
+
+.carrousel {
+    position: relative;
+}
+.carrousel img{
+    height: 415px;
+    width: fit-content;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.previousButton {
+    position: absolute;
+    left: 23px;
+    top: 50%;
+}
+.button {
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    border: none;
+    width: 47px;
+    height: 79px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.previous.button {
+    position: absolute;
+    left: 23px;
+    top: 37%;
+    background-image: url('../assets/VectorLeft.png');
+}
+
+.next.button {
+    position: absolute;
+    right: 23px;
+    top: 37%;
+    background-image: url('../assets/VectorRight.png');
+}
+
+.pictureNumber {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+}
+
 /* HeadDescription */
 
 .accomodation {
@@ -67,7 +118,27 @@
     margin-left: 10px;
 }
 
+.accomodationRating {
+    display: flex;
+}
 
+  .star {
+    position: relative;
+    font-size: 29px;
+  }
+  
+  .star::before {
+    content: '\2605'; /* le code pour l'étoile */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #E3E3E3;
+  }
+  
+  .star.filled::before {
+    color: #FF6060; /* Couleur de remplissage de l'étoile */
+  }
+  
 /* BodyDescription */
 
 .bodyDescription {
