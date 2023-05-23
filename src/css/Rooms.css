@@ -17,16 +17,11 @@
 }
 .carrousel img{
     height: 415px;
-    width: fit-content;
+    width: 100%;
     object-fit: cover;
     border-radius: 25px;
 }
 
-.previousButton {
-    position: absolute;
-    left: 23px;
-    top: 50%;
-}
 .button {
     background-size: cover;
     background-repeat: no-repeat;
@@ -179,3 +174,86 @@
     line-height: 26px;
     border-radius: 0 0 10px 10px;
 }
+
+@media all and (max-width: 400px) {
+    .carrousel img{
+        height: 255px;
+        border-radius: 10px;
+    }
+    .button {        
+        width: 11px;
+        height: 19px;
+    }
+    .previous.button, .next.button {
+        top: 48%;
+    }
+    .previous.button {
+        left: 6px;
+    }
+    .next.button {
+        right: 6px;
+    }
+    .pictureNumber {
+        display: none;
+    }
+    .accomodation {
+        margin: 13px 0 5px 0;
+        flex-direction: column;
+    }
+    .headContainer h2 {
+        font-size: 18px;
+    }
+    .accomodationLocation {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .accomodationtag {
+        height: 18px;
+        border-radius: 5px;
+        font-size: 10px;
+        min-width: 84px;
+    }
+    .bodyContainer {
+        width: 100%;
+    }
+    .headContainer.second {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .accomodationRating {
+        width: 100px;
+        margin: 0 0 10px 0;
+    }
+    .star {
+        font-size: 20px;
+    }
+    .accomodationHost {
+        margin: 16.5px 0 0 0;
+    }
+    .accomodationHost h4 {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .accomodationHost img {
+        width: 32px;
+    }
+    .bodyDescription {
+        flex-direction: column;
+    }
+    .accomodationEquipments, .bodyContainer p {
+        min-height: 0;
+        padding: 17px 7px 0 11.5px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .bodyDescription h5 {
+        font-size: 13px;
+        height: 30px;
+        padding-left: 11.5px;
+    }
+    .bodyDescription img {
+        width: 16px;
+    }
+    }
