@@ -80,7 +80,8 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 .accomodationtag {
     color: white;
@@ -92,7 +93,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px 0 0;
+    margin: 10px 10px 0 0;
 }
 .accomodationHost {
     display: flex;
@@ -175,11 +176,53 @@
     border-radius: 0 0 10px 10px;
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 900px) {
+    .carrousel img{
+        height: 350px;
+        border-radius: 15px;
+    }
+    .headContainer h2 {
+        font-size: 25px;
+    }
+    .accomodationLocation {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .carrousel img{
+        height: 300px;
+        border-radius: 12px;
+    }
+    .headContainer h2 {
+        font-size: 22px;
+    }
+    .accomodationLocation {
+        font-size: 15px;
+    }
+    .accomodationtag {
+        height: 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        min-width: 95px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .accomodationtag {
+        border-radius: 5px;
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 500px) {
     .carrousel img{
         height: 255px;
         border-radius: 10px;
     }
+}
+
+@media all and (max-width: 400px) {
     .button {        
         width: 11px;
         height: 19px;
