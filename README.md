@@ -1,3 +1,10 @@
+Projet 6 OPENCLASSROOMS : Créez une application web de location immobilière avec React
+
+Nom du site : Kasa
+
+Pour lancer l'application, utiliser la commande "npm start" à la racine du dossier.
+
+Le fichier contenant le code React Router pour les routes est app.js, il se trouve dans 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
