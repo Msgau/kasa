@@ -46,18 +46,7 @@ function Diapo({ accomodation }) {
 
   // S'il n'y a qu'une seule image, on ne montre pas les boutons de navigation
   if (accomodation.pictures.length === 1) {
-    return (
-      <div className="carrousel">
-        <img
-          src={accomodation.pictures[currentImageIndex]}
-          alt={accomodation.title}
-        />
-        <div className="pictureNumber">
-          {currentImageIndex + 1}/{accomodation.pictures.length}
-        </div>
-      </div>
-    );
-  }
+    return (<div className="carrousel"><img src={accomodation.pictures[currentImageIndex]} alt={accomodation.title} /></div>);}
 
   return (
     <div className="carrousel">
@@ -139,7 +128,7 @@ function BodyDescription({ accomodation }) {
             className="arrowDown"
           />
         </h5>
-        {showDescription && <p>{accomodation.description}</p>}
+        {showDescription && <p className={`${showDescription ? 'visible' : 'invisible'}`}>{accomodation.description}</p>}
       </div>
       <div className="bodyContainer">
         <h5 onClick={() => setShowEquipements(!showEquipements)}>

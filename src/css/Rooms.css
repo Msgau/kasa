@@ -166,7 +166,7 @@
 }
 
 .bodyDescription p, .accomodationEquipments {
-    min-height: 230px;
+    min-height: 250px;
     color: #FF6060;
     background-color: #F7F7F7;
     padding: 30px 12px 20px 20px;
@@ -174,8 +174,22 @@
     font-size: 18px;
     line-height: 26px;
     border-radius: 0 0 10px 10px;
+    animation: reveal 0.5s ease;
 }
 
+@keyframes reveal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+  @media all and (max-width: 1050px) {
+    .accomodationEquipments, .bodyContainer p {
+        min-height: 85%;
+    }
+}
 @media all and (max-width: 900px) {
     .carrousel img{
         height: 350px;
@@ -186,6 +200,13 @@
     }
     .accomodationLocation {
         font-size: 16px;
+    }
+    .button {        
+        width: 20px;
+        height: 33px;
+    }
+    .previous.button, .next.button {
+        top: 48%;
     }
 }
 
@@ -206,6 +227,14 @@
         font-size: 12px;
         min-width: 95px;
     }
+    .accomodationEquipments, .bodyContainer p {
+        padding: 17px 7px 0 11.5px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .bodyContainer p {
+        font-size: 14px;
+    }
 }
 
 @media all and (max-width: 550px) {
@@ -220,15 +249,9 @@
         height: 255px;
         border-radius: 10px;
     }
-}
-
-@media all and (max-width: 400px) {
     .button {        
         width: 11px;
         height: 19px;
-    }
-    .previous.button, .next.button {
-        top: 48%;
     }
     .previous.button {
         left: 6px;
