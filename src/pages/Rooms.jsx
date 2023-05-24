@@ -2,8 +2,8 @@ import { useParams, Navigate } from "react-router-dom";
 import { useState } from "react";
 import logements from "../data/logements.json";
 import Header from "../components/Header";
-import unroll from "../assets/icons/VectorDown.png";
-import rollUp from "../assets/icons/VectorUp.png";
+import unroll from "../images/icons/VectorDown.png";
+import rollUp from "../images/icons/VectorUp.png";
 import "../css/Rooms.css";
 
 export default function Rooms() {

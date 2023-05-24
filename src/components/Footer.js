@@ -1,5 +1,5 @@
 import "../css/Footer.css";
-import WhiteLogo from "../assets/white_logo.png";
+import WhiteLogo from "../images/white_logo.png";
 
 export default function Footer() {
   return (

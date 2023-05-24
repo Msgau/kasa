@@ -1,5 +1,5 @@
 .baniereAbout {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/baniereAbout.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereAbout.png');
     width: 100%;
     max-width: 1240px;
     height: 223px;
@@ -48,7 +48,7 @@
     @media all and (max-width: 375px) {
 
         .baniereAbout {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/baniereAboutMobile.png');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereAboutMobile.png');
         }
         .about h2 img {
             width: 13.8px;

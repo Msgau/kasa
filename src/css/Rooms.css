@@ -36,14 +36,14 @@
     position: absolute;
     left: 23px;
     top: 37%;
-    background-image: url('../assets/VectorLeft.png');
+    background-image: url('../images/icons/VectorLeft.png');
 }
 
 .next.button {
     position: absolute;
     right: 23px;
     top: 37%;
-    background-image: url('../assets/VectorRight.png');
+    background-image: url('../images/icons/VectorRight.png');
 }
 
 .pictureNumber {

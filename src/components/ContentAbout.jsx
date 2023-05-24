@@ -1,7 +1,7 @@
 import "../css/ContentAbout.css";
 import React, { useState } from "react";
-import unroll from "../assets/icons/VectorDown.png";
-import rollUp from "../assets/icons/VectorUp.png";
+import unroll from "../images/icons/VectorDown.png";
+import rollUp from "../images/icons/VectorUp.png";
 
 export default function BaniereAbout() {
   const [showFiabilite, setShowFiabilite] = useState(false);

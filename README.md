@@ -4,7 +4,19 @@ Nom du site : Kasa
 
 Pour lancer l'application, utiliser la commande "npm start" à la racine du dossier.
 
-Le fichier contenant le code React Router pour les routes est app.js, il se trouve dans 
+Le fichier contenant le code React Router pour les routes est app.js, il se trouve dans src\pages\Home\Routes.js
+
+Les pages sont rangées dans le dossier src\pages
+Les composants sont rangés dans le dossier src\components
+Les images dans src\images
+Les styles dans src\CSS
+
+    Page principale : Home, accessible depuis le Header présent sur toutes les pages. Référence tous les logements
+    Page A propos : About, accessible depuis le Header présent sur toutes les pages
+    Page 404 : Error404, s'affiche lorsqu'une mauvais route est rentrée dans l'url
+    Pages rooms : Rooms/:id générées en fonction du nombre de logements présents dans la BDD/le JSON, 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

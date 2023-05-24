@@ -1,5 +1,5 @@
 import '../css/header/header.css'
-import logo from '../assets/LOGO.png'
+import logo from '../images/LOGO.png'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
