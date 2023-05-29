@@ -25,7 +25,6 @@ function RouteConfiguration() {
     </div>
     <Footer />
   </div>
-
   );
 }
 
