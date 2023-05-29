@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from "../../components/Footer.js";
 import Home from './Home.jsx';
@@ -8,8 +7,8 @@ import Rooms from '../Rooms.jsx';
 import '../../css/Index.css'
 
 function RouteConfiguration() {
-  return (
 
+  return (
     <div className="page-container">
     <div className="content-wrap">
     
@@ -22,8 +21,8 @@ function RouteConfiguration() {
           <Route path='/rooms/:id' element={<Rooms />} />
         </Routes>
       </Router>
+
     </div>
-    
     <Footer />
   </div>
 
