@@ -4,7 +4,7 @@ Nom du site : Kasa
 
 Pour lancer l'application, utiliser la commande "npm start" à la racine du dossier.
 
-Le fichier contenant le code React Router pour les routes est routes.js, il se trouve dans src\pages\Home\Routes.js
+Le fichier contenant le code React Router pour les routes est Routes.js, il se trouve dans src\pages\Home\Routes.js
 
 Les pages sont rangées dans le dossier src\pages
 Les composants sont rangés dans le dossier src\components
