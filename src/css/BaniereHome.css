@@ -6,7 +6,12 @@
     border-radius: 25px;
 }
 
-.baniere h1 {
+.baniere__title__lineBreak { /* Le span est posé pour le responsive */
+    margin: 0;
+    white-space: pre;
+}
+
+.baniere__title {
     color: white;
     height: 223px;
     display: flex;
@@ -16,21 +21,18 @@
     font-weight: 500;
     font-size: 48px;
 }
-.baniere span {
-    margin: 0;
-    white-space: pre;
-}
+
 
 @media all and (max-width: 800px) {
 
-    .baniere h1 {
+    .baniere__title {
         flex-direction: column;
     }
 }
 
 @media all and (max-width: 500px) {
 
-    .baniere h1 {
+    .baniere__title {
         font-size: 36px;
     }
 
@@ -41,13 +43,13 @@
         height: 111px;
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereMobile.png');
     }
-    .baniere h1 {
+    .baniere__title {
         font-size: 24px;
         height: 100%;
         margin-left: 16px;
         align-items: flex-start;
     }
-    .lineBreak {
+    .baniere__title__lineBreak--down {
         flex-direction: column;
     }
 }

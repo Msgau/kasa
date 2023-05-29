@@ -4,7 +4,6 @@
     justify-content: space-between;
     padding: 6px 0 50px 0;
     width: 92%;
-
     border-radius: 25px;
     margin-top: 43px;
 }
@@ -13,17 +12,17 @@
     width: 1240px;
     border-radius: 25px;
 }
-.block, .block img {
+.Gallery__block, .Gallery__block__image {
     width: 340px;
     height: 340px;
 }
-.block {
+.Gallery__block {
     margin: 50px auto auto auto;
     flex-direction: row;
     border-radius: 10px;
     position: relative;
 }
-.block img {
+.Gallery__block__image {
     object-fit: cover;
     border-radius: 10px;
 }
@@ -31,7 +30,7 @@
 .Gallery li{
     margin: 0;
 }
-.block::before {
+.Gallery__block::before {
     content: '';
     position: absolute;
     top: 0;
@@ -42,7 +41,7 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-.block h2 {
+.Gallery__block__title {
     position : absolute;
     left: 20px;
     bottom: 20px;
@@ -58,19 +57,19 @@
     width: 100%;
     margin: auto 0 auto 0;
 }
-.block img, .block{
+.Gallery__block__image, .Gallery__block{
     width: 300px;
     height: 300px;
 }
 }
 
 @media all and (max-width: 1093px) {
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 400px;
         height: 400px;
     }}
 @media all and (max-width: 1093px) {
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 400px;
         height: 400px;
     }}
@@ -83,7 +82,7 @@
     }
 }
 @media all and (max-width: 935px) {
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 350px;
         height: 350px;
     }}
@@ -91,36 +90,36 @@
     .Gallery {
         margin-top: 2px;
     }
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 330px;
         height: 330px;
     }}
 @media all and (max-width: 750px) {
-    .block {
+    .Gallery__block {
         margin-top: 30px;
     }
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 300px;
         height: 300px;
     }}
 @media all and (max-width: 700px) {
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 275px;
         height: 275px;
     }}
 @media all and (max-width: 635px) {
 
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 255px;
         height: 255px;
     }}
 @media all and (max-width: 600px) {
-    .block {
+    .Gallery__block {
         margin-top: 20px;
     }
     .Gallery {
         justify-content: center;
     }
-    .block img, .block{
+    .Gallery__block__image, .Gallery__block{
         width: 100%;
     }}

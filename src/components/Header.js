@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
-      <header>
+      <header> 
         <Logo />
         <Menu />
       </header>
@@ -18,10 +18,10 @@ function Logo(){
   }
   
 function Menu(){
-    return <nav>
+    return <nav className='navbar'>
       <ul>
-        <Link to="/"><li>Accueil</li></Link>
-        <Link to="/about"><li>A propos</li></Link>
+        <Link to="/" className='navbar__link'><li>Accueil</li></Link>
+        <Link to="/about" className='navbar__link'><li>A propos</li></Link>
         </ul>
     </nav>
   }
