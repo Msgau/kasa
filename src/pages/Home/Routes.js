@@ -7,7 +7,7 @@ import Error404 from '../Error404.jsx';
 import Rooms from '../Rooms.jsx';
 import '../../css/Index.css'
 
-function App() {
+function RouteConfiguration() {
   return (
 
     <div className="page-container">
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default RouteConfiguration;
