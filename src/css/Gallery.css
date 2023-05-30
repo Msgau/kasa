@@ -108,18 +108,14 @@
         height: 275px;
     }}
 @media all and (max-width: 635px) {
-
-    .Gallery__block__image, .Gallery__block{
-        width: 255px;
+    .Gallery__block__image, .Gallery__block, .Gallery li{
+        width: 100%;
         height: 255px;
+    }
+    .Gallery li {
+        margin-top: 20px;
     }}
 @media all and (max-width: 600px) {
-    .Gallery__block {
-        margin-top: 20px;
-    }
-    .Gallery {
-        justify-content: center;
-    }
     .Gallery__block__image, .Gallery__block{
         width: 100%;
     }}
