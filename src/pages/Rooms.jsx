@@ -117,6 +117,7 @@ function HeadDescription({ accomodation }) {
 function BodyDescription({ accomodation }) {
   const [showDescription, setShowDescription] = useState(false);
   const [showEquipements, setShowEquipements] = useState(false);
+  
   return (
     <div className="bodyDescription">
       <div className="bodyContainer">

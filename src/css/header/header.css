@@ -19,7 +19,7 @@ header {
     margin: 0;
 }
 .homeHeader img {
-    margin-right: 20px;
+    margin-right: 25px;
 }
 .navbar{
     margin: 0;
@@ -79,14 +79,23 @@ header {
     }
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 415px) {
 
-    header nav li {
+    header .navbar__link li {
         font-size: 12px;
         text-transform: uppercase;
     }
-    header nav {
+    header .navbar__link {
         max-width: 140px;
         margin: 0;
     }
+    .navbar ul {
+        width: 165px;
+    }
+}
+    @media all and (max-width: 375px) {
+
+        .navbar ul {
+            width: 100%;
+        }
 }
