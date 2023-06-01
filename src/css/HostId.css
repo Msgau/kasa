@@ -1,0 +1,29 @@
+.accomodationHost {
+    display: flex;
+}
+.accomodationHostName{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.accomodationHostPicture {
+    border-radius: 50%;
+    width: 64px;
+    margin-left: 10px;
+}
+.firstWord {
+    display: block;
+}
+
+@media all and (max-width: 500px) {
+    .accomodationHost {
+        margin: 16.5px 0 0 0;
+    }
+    .accomodationHost h4 {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .accomodationHost img {
+        width: 32px;
+    }
+}

@@ -1,0 +1,48 @@
+.about h2, .bodyDescription h5{
+    color: white;
+    background-color: #FF6060;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.about p, .bodyDescription p {
+    color: #FF6060;
+    background-color: #F7F7F7;
+    font-weight: 400;
+    animation: reveal 0.5s ease; /* Animation dans rooms.css ligne 180 */
+}
+
+.unroll {
+    position: relative;
+}
+
+.about img, .bodyDescription img {
+    position: absolute;
+}
+
+.bodyDescription p, .accomodationEquipments, .about p{
+    animation: reveal 0.5s ease;
+}
+
+@keyframes reveal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+@media all and (max-width: 375px) {
+
+    .about h2 img {
+        width: 13.8px;
+    }
+    .about h2, .bodyDescription h5 {
+        font-size: 13px;
+    }
+    .about p, .bodyDescription p {
+        font-size: 12px;
+    }
+}

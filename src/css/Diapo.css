@@ -1,0 +1,82 @@
+.carrousel {
+    position: relative;
+}
+.carrousel img{
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.button {
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    border: none;
+    width: 47px;
+    height: 79px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.previous.button {
+    position: absolute;
+    left: 23px;
+    top: 37%;
+    background-image: url('../images/icons/VectorLeft.png');
+}
+
+.next.button {
+    position: absolute;
+    right: 23px;
+    top: 37%;
+    background-image: url('../images/icons/VectorRight.png');
+}
+
+.pictureNumber {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media all and (max-width: 900px) {
+    .carrousel img{
+        height: 350px;
+        border-radius: 15px;
+    }
+    .button {        
+        width: 20px;
+        height: 33px;
+    }
+    .previous.button, .next.button {
+        top: 48%;
+    }
+}
+@media all and (max-width: 650px) {
+    .carrousel img{
+        height: 300px;
+        border-radius: 12px;
+    }
+}
+@media all and (max-width: 500px) {
+    .carrousel img{
+        height: 255px;
+        border-radius: 10px;
+    }
+    .button {        
+        width: 11px;
+        height: 19px;
+    }
+    .previous.button {
+        left: 6px;
+    }
+    .next.button {
+        right: 6px;
+    }
+    .pictureNumber {
+        display: none;
+    }
+}

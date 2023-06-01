@@ -1,0 +1,45 @@
+.accomodationTags {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.accomodationTag {
+    color: white;
+    background-color: #FF6060;
+    border-radius: 10px;
+    min-width: 115px;
+    padding: 0 5px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 0 0;
+}
+
+@media all and (max-width: 650px) {
+
+    .accomodationTag {
+        height: 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        min-width: 95px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .accomodationTag {
+        border-radius: 5px;
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .accomodationTag {
+        height: 18px;
+        border-radius: 5px;
+        font-size: 10px;
+        min-width: 84px;
+    }
+}

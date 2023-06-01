@@ -1,0 +1,30 @@
+.accomodationRating {
+    display: flex;
+}
+
+  .star {
+    position: relative;
+    font-size: 29px;
+  }
+  
+  .star::before {
+    content: '\2605'; /* le code pour l'étoile */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #E3E3E3;
+  }
+  
+  .star.filled::before {
+    color: #FF6060; /* Couleur de remplissage de l'étoile */
+  }
+
+  @media all and (max-width: 500px) {
+    .accomodationRating {
+        width: 100px;
+        margin: 0 0 10px 0;
+    }
+    .star {
+        font-size: 20px;
+    }
+}

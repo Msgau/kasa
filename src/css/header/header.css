@@ -36,15 +36,10 @@ header {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    color: #FF6060;
 }
-.navbar__link{
+.navbar a {
     color: #FF6060;
-    text-decoration: none;
     margin: 0;
-}
-.navbar__link :hover {
-    text-decoration: underline;
 }
 
 
@@ -81,11 +76,11 @@ header {
 
 @media all and (max-width: 415px) {
 
-    header .navbar__link li {
+    header .navbar li {
         font-size: 12px;
         text-transform: uppercase;
     }
-    header .navbar__link {
+    header .navbar {
         max-width: 140px;
         margin: 0;
     }

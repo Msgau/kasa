@@ -1,0 +1,37 @@
+.about h2{
+    margin-top: 31px;
+    border-radius: 5px;
+    padding-left: 18px;
+    height: 47px;
+}
+
+.about p {
+    font-size: 24px;
+    padding: 27px 27px 15px 18px;
+}
+
+.about p, .about .unroll{
+    width: 1023px;
+}
+
+.about img {
+    right: 33px;
+    bottom: 15px;
+}
+
+@media all and (max-width: 1240px) {
+
+    .baniereAbout, .about p, .about .unroll {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 375px) {
+
+    .baniereAbout {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereAboutMobile.png');
+    }
+    .about p {
+        padding: 17px 7px 52px 11px;
+    }
+}

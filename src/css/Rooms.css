@@ -10,52 +10,6 @@
     color: #FF6060;
 }
 
-/* Diapo */
-
-.carrousel {
-    position: relative;
-}
-.carrousel img{
-    height: 415px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-}
-
-.button {
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    border: none;
-    width: 47px;
-    height: 79px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.previous.button {
-    position: absolute;
-    left: 23px;
-    top: 37%;
-    background-image: url('../images/icons/VectorLeft.png');
-}
-
-.next.button {
-    position: absolute;
-    right: 23px;
-    top: 37%;
-    background-image: url('../images/icons/VectorRight.png');
-}
-
-.pictureNumber {
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    color: white;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 18px;
-}
-
 /* HeadDescription */
 
 .accomodation {
@@ -76,64 +30,6 @@
     font-size: 18px;
     font-weight: 500;
 }
-.accomodationtags {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-.accomodationtag {
-    color: white;
-    background-color: #FF6060;
-    border-radius: 10px;
-    min-width: 115px;
-    padding: 0 5px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 10px 0 0;
-}
-.accomodationHost {
-    display: flex;
-}
-
-.firstWord {
-    display: block;
-  }
-  
-.accomodationHostName{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26px;
-}
-.accomodationHostPicture {
-    border-radius: 50%;
-    width: 64px;
-    margin-left: 10px;
-}
-
-.accomodationRating {
-    display: flex;
-}
-
-  .star {
-    position: relative;
-    font-size: 29px;
-  }
-  
-  .star::before {
-    content: '\2605'; /* le code pour l'étoile */
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #E3E3E3;
-  }
-  
-  .star.filled::before {
-    color: #FF6060; /* Couleur de remplissage de l'étoile */
-  }
   
 /* BodyDescription */
 
@@ -141,28 +37,23 @@
     display: flex;
     justify-content: space-between;
 }
-.bodyContainer {
+
+.bodyDescription .informationBlock {
     margin: 0;
     width: 46.936%;
 }
 
 .bodyDescription h5 {
-    color: white;
-    background-color: #FF6060;
     margin: 24px 0 0 0;
     border-radius: 5px;
     font-size: 18px;
-    font-weight: 500;
     padding-left: 20px;
     height: 47px;
-    display: flex;
-    align-items: center;
-    position: relative;
 }
 
-.bodyDescription h5 img {
-    position: absolute;
+.bodyDescription img {
     right: 20px;
+    bottom: 15px;
 }
 
 .bodyDescription p, .accomodationEquipments {
@@ -174,94 +65,47 @@
     font-size: 18px;
     line-height: 26px;
     border-radius: 0 0 10px 10px;
-    animation: reveal 0.5s ease;
 }
 
-@keyframes reveal {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100;
-    }
-  }
+
   @media all and (max-width: 1050px) {
-    .accomodationEquipments, .bodyContainer p {
-        min-height: 85%;
+    .bodyDescription p, .accomodationEquipments {
+        min-height: 300px;
     }
 }
+
 @media all and (max-width: 900px) {
-    .carrousel img{
-        height: 350px;
-        border-radius: 15px;
-    }
     .headContainer h2 {
         font-size: 25px;
     }
     .accomodationLocation {
         font-size: 16px;
     }
-    .button {        
-        width: 20px;
-        height: 33px;
-    }
-    .previous.button, .next.button {
-        top: 48%;
-    }
 }
 
 @media all and (max-width: 650px) {
-    .carrousel img{
-        height: 300px;
-        border-radius: 12px;
-    }
     .headContainer h2 {
         font-size: 22px;
     }
     .accomodationLocation {
         font-size: 15px;
     }
-    .accomodationtag {
-        height: 20px;
-        border-radius: 8px;
-        font-size: 12px;
-        min-width: 95px;
-    }
-    .accomodationEquipments, .bodyContainer p {
+
+    .accomodationEquipments, .bodyDescription p {
         padding: 17px 7px 0 11.5px;
         line-height: 20px;
         margin-bottom: 20px;
     }
-    .bodyContainer p {
+    .bodyDescription p {
         font-size: 14px;
     }
-}
-
-@media all and (max-width: 550px) {
-    .accomodationtag {
-        border-radius: 5px;
-        font-size: 10px;
+    .bodyDescription p, .accomodationEquipments {
+        min-height: 225px;
     }
+
 }
 
 @media all and (max-width: 500px) {
-    .carrousel img{
-        height: 255px;
-        border-radius: 10px;
-    }
-    .button {        
-        width: 11px;
-        height: 19px;
-    }
-    .previous.button {
-        left: 6px;
-    }
-    .next.button {
-        right: 6px;
-    }
-    .pictureNumber {
-        display: none;
-    }
     .accomodation {
         margin: 13px 0 5px 0;
         flex-direction: column;
@@ -273,46 +117,29 @@
         font-size: 14px;
         margin-top: 10px;
     }
-    .accomodationtag {
-        height: 18px;
-        border-radius: 5px;
-        font-size: 10px;
-        min-width: 84px;
-    }
-    .bodyContainer {
-        width: 100%;
-    }
     .headContainer.second {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
     }
-    .accomodationRating {
-        width: 100px;
-        margin: 0 0 10px 0;
-    }
-    .star {
-        font-size: 20px;
-    }
-    .accomodationHost {
-        margin: 16.5px 0 0 0;
-    }
-    .accomodationHost h4 {
-        font-size: 12px;
-        line-height: 17px;
-    }
-    .accomodationHost img {
-        width: 32px;
+
+
+    .bodyDescription .informationBlock {
+        width: 100%;
     }
     .bodyDescription {
         flex-direction: column;
     }
-    .accomodationEquipments, .bodyContainer p {
+    .bodyDescription img {
+        right: 7px;
+        bottom: 10px;
+    }
+
+    .bodyDescription p, .accomodationEquipments {
         min-height: 0;
-        padding: 17px 7px 0 11.5px;
+        padding: 17px 7px 3px 11.5px;
         font-size: 12px;
-        line-height: 17px;
     }
     .bodyDescription h5 {
         font-size: 13px;
