@@ -1,3 +1,13 @@
+.baniere__about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereAbout.png');
+    width: 100%;
+    max-width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+}
+.baniere__about h1 {
+    display: none;
+}
 .about h2{
     margin-top: 31px;
     border-radius: 5px;
@@ -21,14 +31,14 @@
 
 @media all and (max-width: 1240px) {
 
-    .baniereAbout, .about p, .about .unroll {
+    .baniere__about, .about p, .about .unroll {
         width: 100%;
     }
 }
 
 @media all and (max-width: 375px) {
 
-    .baniereAbout {
+    .baniere__about {
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereAboutMobile.png');
     }
     .about p {

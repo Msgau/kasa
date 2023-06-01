@@ -1,13 +1,14 @@
 import Header from "../components/Header.js";
 import HiddenContent from "../components/HiddenContent.js";
-import "../css/ContentAbout.css";
 import contentAbout from "../data/about.json";
 import "../css/About.css";
+import Baniere from "../components/BaniereHome.js";
+
 export default function About() {
   return (
     <div>
       <Header />
-      <div className="baniereAbout"></div>
+      <Baniere />
       <div className="about">
         {contentAbout.map(({ id, title, description }) => (
           <HiddenContent

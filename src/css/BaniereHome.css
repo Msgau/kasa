@@ -1,4 +1,4 @@
-.baniere {
+.baniere__home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniere.png');
     width: 100%;
     max-width: 1240px;
@@ -39,7 +39,7 @@
 }
 
 @media all and (max-width: 375px) {
-    .baniere {
+    .baniere__home {
         height: 111px;
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereMobile.png');
     }

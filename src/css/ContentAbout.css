@@ -1,8 +1,0 @@
-.baniereAbout {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/baniereAbout.png');
-    width: 100%;
-    max-width: 1240px;
-    height: 223px;
-    border-radius: 25px;
-}
-
