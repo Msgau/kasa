@@ -21,9 +21,20 @@ ul{
 .page-container{
   display: flex;
   flex-direction: column;
+  position: relative;
   min-height: 100vh;  /* cet élément occupera la totalité de la hauteur de l'écran visible, quel que soit sa taille. */
 }
 .content-wrap{
   flex: 1;
 }
 
+
+/* Dark theme */
+
+.dark-theme, .dark-theme header {
+  background-color: black;
+}
+
+.dark-theme .backgroundGallery, .dark-theme .accomodationEquipments, .dark-theme .bodyDescription p {
+  background-color: grey;
+}

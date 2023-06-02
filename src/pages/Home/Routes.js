@@ -5,6 +5,7 @@ import About from '../About.jsx';
 import Error404 from '../Error404.jsx';
 import Rooms from '../Rooms.jsx';
 import '../../css/Index.css'
+import Toggle from "../../components/toogle.js"
 
 function RouteConfiguration() {
 
@@ -23,6 +24,7 @@ function RouteConfiguration() {
       </Router>
 
     </div>
+    <Toggle />
     <Footer />
   </div>
   );
